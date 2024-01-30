@@ -1,0 +1,7 @@
+Exercice logique type:
+EX2: les salaires extrêmes de l’organisation
+EX3: la date d’embauche de l’ingénieur ayant le plus d’ancienneté
+EX4: le total des indemnités versées
+EX5: le total des rémunération versées
+EX6: affiché le nombre de salarié
+EX7: affiché le nombre de type de poste
