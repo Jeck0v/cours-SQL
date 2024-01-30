@@ -17,4 +17,12 @@ Exemple type:
 	WHERE service.num = salarie.numService
 	GROUP BY libelle;
 => Tous les salariés d’un même service seront totalisés; il y aura autant d’enregistrements-résultats que de services.
+=========================================================================
+En cas de besoin supplémentaire:
+https://www.w3schools.com/sql/sql_datatypes.asp	(infos +)
+https://sql.sh/exercices-sql	(exercices supplémentaire)
+https://sql.sh/cours	(cours +)
+https://learnsql.fr/blog/10-exercices-d-entrainement-sql-pour-debutants-avec-solutions/	(exercices supplémentaire)
+https://docs.postgresql.fr/12/index.html	(cours complets)
+===========================================================================
 
