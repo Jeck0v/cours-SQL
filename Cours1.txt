@@ -1,0 +1,52 @@
+SQL - Langage de manipulation des données
+Cours
+Création d’une table:
+exemple:
+CREATE TABLE user(
+id INT PRIMARY KEY NOT NULL,
+nom VARCHAR(100),
+prenom VARCHAR(100),
+email VARCHAR(255),
+	dateNaissance DATE
+);
+Modifier le contenu d’une table:
+salarie (num,nom,prenom,dateEmbauche,salaire,poste,titulaire)
+Insérer un à plusieurs nouveaux enregistrements dans la table:
+	INSERT INTO salarie [(champ1, champ2, ….)]
+	VALUES (valeurchamp1, valeurchamp2, ….);
+Mettre à jour les valeurs d’un à plusieurs à plusieurs champs d’un ou plusieurs enregistrements de la table:
+	UPDATE salarie
+	SET 	ChampMisAJour = nouvelleValeur [,champ2 = nouvelleValeur];
+(Where critère de restriction AND/OR…..)
+Supprimer un à plusieurs enregistrements de la table:
+	DELETE … FROM salarie;
+(Where critère de restriction AND/OR ….)
+Insertion d’enregistrements:
+	ex: Insérons deux salariés dans la relation
+
+salarie (num,nom,prenom,dateEmbauche,salaire,poste,titulaire) num est auto-incrémenté:
+	INSERT INTO salarie
+	VALUES (‘’, “Arist”,”Léa”,’2003-08-05’,1630.41,”logisticienne”, TRUE),
+Valeur auto-incrémenté ==> (‘’,”Lakab,”Karim”,’2011-12-22’, ,”ingenieur informatique”, FALSE);
+
+Double guillemets pour les valeurs alphanumérique (texte)
+Simple guillemets (ou quotes) pour les valeurs date/heure
+Rien pour les valeurs booléennes ou numérique (un point pour les décimales car la virgule sert de séparateur entre les valeurs
+Mise à jour de champs d’enregistrements:
+ex: tous les salariés bénéficient d’une augmentation forfaitaire de 12 €
+	UPDATE salarie
+	SET salaire = salaire + 12;
+ex: changement de poste donc salaire plus haut
+	UPDATE salarie
+	SET poste = “responsable commerciale”, salaire = 2200
+	WHERE num = 29;
+(on met l’id dans ce cas là le num du salarié pour éviter de mettre son nom et prénom pour le cas d’un homonyme par exemple)
+Suppression d’enregistrements:
+ex relation: commande (num,date,numClient), la commande n°2476 à été annulée
+	DELETE FROM commande
+	WHERE num = 2476;
+ex relation: salarie (num, nom, prenom,dateEmbauche,salaire,poste)
+	UPDATE salarie
+	SET poste NULL
+	WHERE num = 29;
+(le salarié attribué au num 29 n’est plus dans l’organisations donc, on supprime son poste dans la BDD)
