@@ -1,0 +1,17 @@
+Réponses:
+9)	SELECT nom, COUNT(*)
+	FROM salarie, competence
+	WHERE num = numSalarie
+	GROUP BY num, nom;
+=> Le regroupement avec num permet d'éviter que deux salariés qui ont le même nom soient confondus et comptés ensemble.
+10)	SELECT libelle, AVG(salaire) AS salMoy
+	FROM salarie, service
+	WHERE libelle <> “direction”
+	AND service.num = salarie.numService
+	GROUP BY service.num, libelle
+	ORDER BY salMoy DESC;
+=> L’alias (AS) permet d’éviter d’avoir à répéter la fonction d'agrégat dans la clause ORDER BY.
+11)	SELECT YEAR(dateEmbauche), COUNT(salarie.num)
+	FROM salarie
+	GROUP BY YEAR(dateEmbauche)
+	ORDER BY YEAR(dateEmbauche);
