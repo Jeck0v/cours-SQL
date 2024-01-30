@@ -1,0 +1,47 @@
+Projection:
+	La projection est l’opération qui consiste à délivrer des données.
+Représentation vulgaire: résultat affiché:
+Certaines données peuvent être utilisées justement par des programmes pour un affichage et d'autres pour les traitements.
+=====================
+L’instruction SELECT détermine les données à projeter en provenance de tables précisées dans la clause FROM:
+relation exemple:
+salarie (num,nom,prenom,dateEmbauche,salaire,indemnite,poste)
+	Exemple 1:
+	SELECT nom,prenom
+	FROM salarie;
+La requête s'exécute affichant le nom et prénom, d’autant de salariés qui y sont enregistrés .
+	SELECT * FROM salarie;
+La requête s’exécute et affiche tout ce qu’il y a dans la table.
+
+
+	Exemple 2:
+	SELECT DISTINCT poste
+	FROM salarie;
+Seuls les enregistrements différents sur tous les champs seront affichés grâce à la clause DISTINCT (Par défaut SELECT équivaut à un SELECT ALL).
+	Exemple 3:
+	SELECT nom, prenom, salaire+indemnite
+	FROM salaire;
+La rémunération est une donnée calculée.
+============================
+TRIS:
+Les enregistrements projetés ne sont pas triés par défaut, pour les triés on peut utiliser ORDER BY.
+Les tris ont lieu selon l’ordre spécifié dans la clause ORDER BY, pour chaque critère de tri, le classement peut être croissant (ASC) ou décroissant (DESC).
+	Exemple: une liste alphabétique des salariés
+	SELECT nom, prenom
+	FROM salarie
+	ORDER BY nom ASC; ⇐ASC est facultatif 
+Pour éviter des homonymes on peut utiliser un second critères:
+SELECT nom, prenom
+	FROM salarie
+	ORDER BY nom, prenom ASC; ⇐ASC est facultatif 
+================================================================
+Exo 1: De la même manière une liste des salariés triés par salaire décroissant.
+Exo 2: liste des salariés triés par rénumération décroissante, celle ci étant affichée.
+================================================================
+Réponse 1 et 2:
+1)	SELECT nom, prenom
+FROM salarie
+ORDER BY salaire DESC;
+2)	SELECT nom, prenom, salaire+indemnite AS renumeration
+FROM salarie
+ORDER BY renumeration DESC;
