@@ -1,0 +1,20 @@
+Regroupement des résultats:
+La clause GROUP BY permet d’effectuer des opérations par sous-groupes d’enregistrements délivrant ainsi plusieurs enregistrements-résultat. La clause ORDER BY retrouve ici sa raison d’être. Les critères de restriction et de jointure peuvent toujours être présents.
+Exemple schéma relationnel:
+service (num,libelle,budget)
+clé primaire: num
+qualification (num, libelle, niveau)
+clé primaire: num
+salarie (num,nom,prenom,dateEmbauche,salaire,numService)
+clé primaire: num
+clé étrangère: numService
+competence (numSalarie, numQualif, dateAcq)
+clé primaire: numSalarie, numQualif
+clé étrangères: numSalarie, numQualif
+Exemple type:
+	SELECT libelle, SUM(salaire)
+	FROM salarie, service
+	WHERE service.num = salarie.numService
+	GROUP BY libelle;
+=> Tous les salariés d’un même service seront totalisés; il y aura autant d’enregistrements-résultats que de services.
+
