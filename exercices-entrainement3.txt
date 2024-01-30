@@ -1,0 +1,4 @@
+Exercices Logique:
+EX9: le nombre de qualifications possédées par chaque salariés lors de sa carrière
+EX10: le salair moyen par service (sauf direction), par ordre décroissant de ces salaires moyen
+EX11: le nombre de salariés embauchés par année, par ordre chronologique
