@@ -1,0 +1,35 @@
+Les Jointures:
+Les jointures sont nécessaires dès lors que la requête fait appel à plusieurs tables.
+dans une relation:
+service (num,libelle,budget) 
+clé primaire: num
+salarie (num,nom,prenom,dateEmbauche,salaire,numService)
+clé primaire: num
+clé étrangère: numService
+Exemple: liste alphabétique des salariés avec le libellé de leur service
+SELECT salarie.*,libelle
+FROM salarie, service
+WHERE service.num = numService
+ORDER BY nom,prenom;
+======================
+La syntaxe alternative différencie les critère de jointure (JOIN) de ceux de restriction (WHERE, AND):
+Exemple: liste des salariés du service logistique avec leur nom et prénom.
+	SELECT salarie.*,libelle
+	FROM salarie
+	JOIN service ON salarie.numService = service.num ⇐critère de jointure 
+	WHERE libelle = “logistique”;
+=============================================================
+Clause FROM:
+La clause FROM énumère les tables dont au moins un champ est projeté ou nécessaire à un critère de restriction ou de jointure (certaines tables ne peuvent n’être qu’intermédiaire pour établir des jointures entre toutes les tables).
+==============================================================
+Fonctions d’agrégat:
+SUM (....) 	Somme des valeurs de données de type numérique ou date/heure
+AVG (....)	Moyenne des valeurs de données de type numérique ou date/heure
+MIN (....)	Minimum des valeurs de données de type numérique ou date/heure
+MAX (....)	Maximum des valeurs de données de type numérique ou date/heure
+COUNT (....)	Compte du nombre d’enregistrements d’une sélection
+
+Exemple type: le salaire moyen des salariés de l’organisation
+salarie (num,nom,prenom,dateEmbauche,salaire,numService)
+	SELECT AVG(salaire)
+	FROM salarie;
