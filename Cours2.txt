@@ -1,0 +1,21 @@
+Critère de restriction: 
+Les restrictions consistent à restreindre la portée de la requête aux seuls enregistrements respectant ces critères.
+Un critère de restriction associe généralement une expression liée aux champs à une ou des valeurs définies.
+	La mise en relation de ces expressions avec ces valeurs se fait au moyen:
+d’opérateurs de comparaison: =, >, <, >=, <=, < > (différent de);
+d’opérateurs SQL:
+expr BETWEEN val1 AND val2 
+La valeur expr doit être comprise entre les valeurs val1 et val2 (incluses).
+	expr IN (val1, val2, ….)
+La valeur expr doit être égale à (au moins) une des valeurs de la liste énumérée entre parenthèses (IN = parmi).
+	expr LIKE chaine
+La valeur expr est égale à la valeur de chaîne, une chaîne de caractère qui peut contenir des caractères Joker (‘_’ pour un seul caractère, ‘%’ pour plusieurs caractères)
+d’opérateurs de négation NOT
+Les critères de restriction sont multiples, le premier prend toujours place dans un critère WHERE, les suivants dans des critères AND s’ils s’ajoutent ou OR s’ils sont alternatifs.
+⇒ Conseil: entraînez vous à comprendre la logique et c’est gagner
+Exo logique type avec WHERE et AND:
+(les réponses sont à la fin pour corriger les fautes)
+Dans une relation:
+salarie( num, nom,prenom,dateNaissance,dateEmbauche,salaire,poste)
+Exemple: requête restreinte aux salariés qui occupent le poste de commercial:
+	WHERE poste=”commercial”;
