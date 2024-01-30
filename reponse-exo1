@@ -1,0 +1,50 @@
+Réponse exo 2 à 17:
+2)	WHERE salaire>=2000;
+
+3)	WHERE poste=”commercial”
+	AND salaire<2000;
+
+4)	WHERE (poste=”commercial”
+	OR salaire<2000);
+
+5)	WHERE dateEmbauche<’2020-01-01’;
+
+6)	WHERE salaire BETWEEN 1000 AND 2000;
+ou 	WHERE salaire>=1000
+	AND salaire<=2000;
+
+7)	WHERE dateEmbauche BETWEEN ‘2020-01-01’ AND ‘2019-12-31’;
+ou	WHERE YEAR(dateEmbauche)<>2019;
+ou	WHERE dateEmbauche >=’2020-01-01’ OR dateEmbauche>’2019-12-31’;
+
+8)	WHERE poste IN (“commercial”, “ingenieur”);
+ou	WHERE (poste=”commercial”
+	OR poste=”ingenieur”);
+
+9)	WHERE nom LIKE “M%”;
+
+10)	WHERE poste IS NULL;
+
+11)	WHERE poste IS NOT NULL;
+
+12)	WHERE dateEmbauche NOT BETWEEN ‘2019-01-01’ AND ‘2019-12-31);
+ou	WHERE YEAR(dateEmbauche)<>2019;
+ou	WHERE NOT Year(dateEmbauche)=2019;
+ou	WHERE (dateEmbauche<’2019-01-01’ OR dateEmbauche>’2019-12-31’;
+
+13)	WHERE poste NOT IN (“commercial”, “ingenieur”);
+ou	WHERE poste <> “commercial”
+	AND poste <>”ingenieur”;
+
+14)	WHERE prenom NOT LIKE “%z_”;
+
+15)	WHERE ( (poste=”commercial” AND salaire>2000)
+	OR poste=”ingenieur”)
+
+16)	WHERE (poste=”commercial”OR poste= “ingenieur”)
+	AND salaire>2000;
+ou	WHERE poste IN (“commercial”, “ingenieur”)
+	AND salaire>2000;
+
+17)	WHERE MONTH(dateEmbauche) =MONTH(dateNaissance)
+	AND DAY(dateEmbauche) =DAY(dateNaissance);
