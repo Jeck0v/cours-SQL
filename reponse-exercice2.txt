@@ -1,0 +1,24 @@
+Réponses: 
+2)	SELECT MIN(salaire), MAX(salaire)
+	FROM salarie;
+
+3)	SELECT MIN(dateEmbauche)
+	FROM salarie
+	WHERE poste=”ingenieur”;
+
+4)	SELECT SUM(indemnite)
+	FROM salarie;
+
+5)	SELECT SUM(salaire) +SUM(indemnite)
+	FROM salarie;
+ou	SELECT SUM(salaire+indemnite)
+	FROM salarie;
+
+6)	SELECT COUNT(num)
+	FROM salarie;
+ou	SELECT COUNT(*)
+	FROM salarie;
+
+7)	SELECT COUNT(DISTINCT poste)
+	FROM salarie;
+DISTINCT permet de ne compter qu’une seule fois les postes occupés par plusieurs salariés.
