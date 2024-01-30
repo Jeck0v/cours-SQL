@@ -1,0 +1,16 @@
+Exercice logique:
+	EX2: requête restreinte aux salariés qui gagnent au moins 2000 €.
+	EX3: requête restreinte aux salariés occupant un poste de commercial et gagnant moins de 2000€.
+	EX4: requête restreinte aux salariés occupant un poste de commercial ou gagnant moins de 2000€.
+	EX5: requête restreinte aux salariés embauchés avant 2020
+	EX6: requête restreinte aux salariés qui gagnent entre 1000 et 2000€
+	EX7: requête restreinte aux salariés embauchés en 2020
+	EX8: requête restreinte aux salariés qui occupent un poste de commercial ou d’ingénieur.
+	EX9: requête restreinte aux salariés dont le nom commence par M.
+	EX10: requête restreinte aux salariés actuellement sans poste.
+	EX11: requête restreinte aux salariés qui n’ont pas été embauchés en 2019
+	EX12: requête restreinte aux salariés qui n’occupent ni un poste de commercial ni un poste d’ingénieur.
+	EX13: requête restreinte aux salariés dont le prénom ne fini pas par Z suivi d’un caractère indéterminé.
+	EX14: requête restreinte aux commerciaux gagnant plus de 2000€ ou aux ingénieurs.
+	EX15: requête restreinte aux commerciaux ou aux ingénieurs, les deux gagnant plus de 2000€.
+	EX16: requête restreinte aux salariés embauchés le jour de leur anniversaire.
